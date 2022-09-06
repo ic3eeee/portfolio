@@ -31,14 +31,24 @@ button {
 }
 
 
+
+
+
 /* nav */
 
 .navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--background-color);
+    background-color: transparent;
     align-items: center;
     color: black;
+    z-index: 1;
+}
+
+.bg-color {
+    background-color: var(--background-color);
 }
 
 .navbar_menu {
@@ -62,6 +72,8 @@ button {
 
 .navbar_logo {
     font-size: 36px;
+    padding-bottom: 15px;
+    padding-left: 30px;
 }
 
 .navbar_toggle-btn {
@@ -76,8 +88,9 @@ button {
 /* home */
 
 .home {
-    background: url('img/background.png') center/cover no-repeat;
+    background-color: var(--background-color);
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 
@@ -89,11 +102,13 @@ button {
     margin-bottom: 25px;
 }
 
-.home_button {
+.contact-btn {
     font-size: 24px;
     font-weight: 600;
     margin: 24px;
     padding: 8px 12px;
+    border: 3px solid white;
+    border-radius: 10px;
 }
 
 .section {
@@ -106,18 +121,25 @@ button {
 
 /* skills */
 
-.row {
+
+
+.skills-container {
     font-size: 80px;
     color: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-
+.skills_icon {
+    width: 200px;
+    height: 200px;
+}
 
 .skills_icon>div {
     height: 30px;
     line-height: 100%;
     font-size: 25px;
-    margin-top: 20px;
 }
 
 
@@ -178,15 +200,15 @@ button {
 
 /* contact */
 
-.contact {
+#contact {
     background: var(--background-color);
 }
 
-.contact i {
+#contact i {
     font-size: 40px;
 }
 
-.contact i:hover {
+#contact i:hover {
     transform: scale(1.5);
 }
 
@@ -194,6 +216,7 @@ button {
     .navbar_toggle-btn {
         display: block;
     }
+
 
     .navbar {
         flex-direction: column;
