@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김성진 포트폴리오</title>
+    <title>SJ's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c7b5b96f91.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,51 +17,85 @@
 </head>
 
 <body>
-    <nav>
-        <div class="navbar__logo">
+    <nav class="navbar">
+        <div class="navbar_logo">
             <i class="fa-solid fa-droplet"></i>
-            <a href="#">Kim Sung Jin</a>
+            <a href="#">S J</a>
         </div>
-        <div class="navbar__menu">
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item">Home</li>
-                <li class="navbar__menu__item">About</li>
-                <li class="navbar__menu__item">Skills</li>
-                <li class="navbar__menu__item">Works</li>
-                <li class="navbar__menu__item">Contact</li>
+        <div class="navbar_menu">
+            <ul class="navbar_menu">
+                <li class="navbar_menu_item active">Home</li>
+                <li class="navbar_menu_item">About</li>
+                <li class="navbar_menu_item">Skills</li>
+                <li class="navbar_menu_item">Works</li>
+                <li class="navbar_menu_item">Contact</li>
             </ul>
         </div>
+
+        <button class="navbar_toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </nav>
 
-    <div id="home">
-        <img src="img/profile.png" class="home__profile">
+    <div class="home">
+        <img src="img/profile.png" class="home_profile">
         <p>안녕하세요 프론트엔드 개발자 김성진입니다</p>
-        <p>제 포트폴리오 페이지에 오신걸 환영합니다</p>
-        <button class="home__button">Contact Me</button>
+        <button class="home_button">Contact Me</button>
     </div>
 
-    <div id="about">
+    <div class="about section">
         <h1>About Me</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nesciunt id commodi deserunt repellat
             facilis alias similique culpa voluptate cumque doloremque optio ipsa, eius natus distinctio rem tempora
             aperiam eum!</p>
     </div>
 
-    <div id="skills">
+    <div class="container-md section">
         <h1>Skills</h1>
-        <i class="fa-brands fa-html5"></i>
-        <i class="fa-brands fa-css3-alt"></i>
-        <i class="fa-brands fa-js"></i>
-        <i class="fa-brands fa-react"></i>
-        <i class="fa-brands fa-bootstrap"></i>
+        <div class="row">
+            <div class="col-sm-4 skills_icon">
+                <i class="fa-brands fa-html5"></i>
+                <div>HTML</div>
+            </div>
+            <div class="col-sm-4 skills_icon">
+                <i class="fa-brands fa-css3-alt"></i>
+                <div>CSS</div>
+            </div>
+            <div class="col-sm-4 skills_icon">
+                <i class="fa-brands fa-js"></i>
+                <div>Javascript</div>
+            </div>
+            <div class="col-sm-4 skills_icon">
+                <i class="fa-brands fa-react"></i>
+                <div>React</div>
+            </div>
+            <div class="col-sm-4 skills_icon">
+                <i class="fa-brands fa-bootstrap"></i>
+                <div>Bootstrap</div>
+            </div>
+        </div>
     </div>
 
-    <div id="works">
+    <div class="works section">
         <h1>Works</h1>
-        <div class="work__project">
-            <a href="#">
-                <img src="" class="project__image">
-                <div class="project__description">
+        <div class="work_project">
+            <a href="#" class="project">
+                <img src="img/background.png" class="project_image">
+                <div class="project_description">
+                    <h3>프로젝트명</h3>
+                    <span>설명</span>
+                </div>
+            </a>
+            <a href="#" class="project">
+                <img src="img/background.png" class="project_image">
+                <div class="project_description">
+                    <h3>프로젝트명</h3>
+                    <span>설명</span>
+                </div>
+            </a>
+            <a href="#" class="project">
+                <img src="img/background.png" class="project_image">
+                <div class="project_description">
                     <h3>프로젝트명</h3>
                     <span>설명</span>
                 </div>
@@ -67,10 +103,12 @@
         </div>
     </div>
 
-    <div id="contact">
-        <h1>Contact</h1>
-        <p>ic3eeee@gmail.com</p>
-        <p><a href="https://github.com/ic3eeee">github</a></p>
+    <div class="contact section">
+        <h1>Contact</h1><br>
+        <h5>e-mail : <strong>ic3eeee@gmail.com</strong></h2><br>
+            <a href="https://github.com/ic3eeee">
+                <i class="fa-brands fa-github"></i><br>
+            </a>
     </div>
 </body>
 
