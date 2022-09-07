@@ -10,7 +10,6 @@ document.addEventListener('scroll', () => {
     }
 });
 
-
 const navbarMenu = document.querySelector('.navbar_menu');
 navbarMenu.addEventListener('click', (e) => {
     const target = e.target;
@@ -19,19 +18,26 @@ navbarMenu.addEventListener('click', (e) => {
         return;
     }
 
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollIntoView(link);
 });
-
 
 const contactBtn = document.querySelector('.contact-btn');
-contactBtn.addEventListener('click', (e) => {
-    const target = e.target;
-    const link = target.dataset.link;
-    if (link == null) {
-        return;
-    }
-
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+contactBtn.addEventListener('click', () => {
+    scrollIntoView('#contact')
 });
+
+
+const home = document.querySelector('.home_container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: "smooth" });
+}

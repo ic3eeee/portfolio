@@ -114,7 +114,6 @@ button {
 .section {
     padding: 50px;
     text-align: center;
-    max-width: 1200px;
     margin: auto;
 }
 
@@ -210,6 +209,23 @@ button {
 
 #contact i:hover {
     transform: scale(1.5);
+}
+
+
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    display: none;
+}
+
+.visible {
+    display: block;
 }
 
 @media screen and (max-width:768px) {
