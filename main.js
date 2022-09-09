@@ -10,6 +10,9 @@ document.addEventListener('scroll', () => {
     }
 });
 
+
+
+
 const navbarMenu = document.querySelector('.navbar_menu');
 navbarMenu.addEventListener('click', (e) => {
     const target = e.target;
@@ -17,9 +20,17 @@ navbarMenu.addEventListener('click', (e) => {
     if (link == null) {
         return;
     }
-
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 });
+
+
+const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
+
 
 const contactBtn = document.querySelector('.contact-btn');
 contactBtn.addEventListener('click', () => {
@@ -34,10 +45,20 @@ document.addEventListener('scroll', () => {
 });
 
 
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+});
 
-
+arrowUp.addEventListener('click', () => {
+    scrollIntoView('#profile');
+})
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: "smooth" });
-}
+};
