@@ -130,8 +130,6 @@ button {
 
 /* skills */
 
-
-
 .skills-container {
     font-size: 80px;
     color: blueviolet;
@@ -232,7 +230,7 @@ button {
     background-color: cornflowerblue;
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 500ms else-in;
+    transition: opacity 400ms else-in;
     pointer-events: none;
 }
 
